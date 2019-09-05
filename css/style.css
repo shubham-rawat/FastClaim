@@ -1,0 +1,71 @@
+.indigo{
+    background-color: #3f51b5;
+}
+.indigo-bg{
+    background-color: #d8dcee;
+}
+.cyan{
+    background-color: #00bcd4;
+}
+.teal{
+    background-color: #009688;
+}
+.voilet{
+    background-color: #6401c7;
+}
+.red{
+    background-color: #FF8C8C;
+}
+.yellow{
+    background-color: #E7EA65;
+}
+.green{
+    background-color: #5EBA15;
+}
+
+input.ng-invalid.ng-touched{
+    box-shadow: 0 0 4px #FF0000;
+    border: 1px solid red;
+}
+
+button:disabled{
+    cursor:not-allowed !important;
+}
+
+::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
+/* The starting CSS styles for the enter animation */
+main.ng-enter {
+    transition:0.5s linear all;
+    opacity:0;
+    transform: translateX(-100%);
+}
+  
+/* The finishing CSS styles for the enter animation */
+main.ng-enter.ng-enter-active {
+    opacity:1;
+    transform: translateX(0);
+}
+
+#claimsTable:hover{
+    cursor: pointer;
+}
+
+#claimsTable.ng-enter{
+    transition:0.3s linear all;
+    opacity:0;
+    transform: translateY(30px);
+}
+
+#claimsTable.ng-enter.ng-enter-active {
+    opacity:1;
+    transform: translateY(0);
+}
+
+#claimsTable.ng-enter-stagger {
+    transition-delay: 0.1s;
+    transition-duration: 0s;
+}
