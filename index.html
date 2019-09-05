@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='myApp'>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- FONTAWESOME CDN -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- ANGULAR JS -->
+    <script src="app/lib/angular.min.js"></script>
+    <script src="app/lib/angular-route.min.js"></script>
+    <script src="app/lib/angular-animate.min.js"></script>
+    <script src="app/myApp.js"></script>
+    <script src="app/login.controller.js"></script>
+
+    <title>FastClaim</title>
+</head>
+<body>
+  <div class="card bg-dark text-white vh-100">
+    <img src="img/bg1.jpg" class="card-img">
+    <div class="card-img-overlay p-5">
+      <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6 px-3">
+          <div id="claimsTable" ng-controller="login" class="p-4 m-3 bg-white text-center rounded shadow">
+            <img src="img/logo.png" class="img-fluid" />
+            <form class="px-4" name="loginForm" novalidate>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="addon-wrapping"><i class="fas fa-user"></i></span>
+                </div>
+                <input type="text" class="form-control" ng-model="data.userid" placeholder="UserId" aria-label="UserId" aria-describedby="addon-wrapping" ng-required="true">
+              </div>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="addon-wrapping"><i class="fas fa-key"></i></span>
+                </div>
+                <input type="password" class="form-control" ng-model="data.password" placeholder="Password" aria-label="Password" aria-describedby="addon-wrapping" ng-required="true">
+              </div>
+              <button type="submit" class="btn btn-outline-success" ng-click="login(data)" ng-disabled="loginForm.$invalid">Login <i class="fas fa-sign-in-alt"></i></button>
+            </form>
+          </div>  
+        </div>
+        <div class="col-sm-3"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="app/lib/bootbox.js"></script>
+
+</body>
+</html>
