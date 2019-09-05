@@ -1,0 +1,32 @@
+<div class="card bg-dark text-white vh-100 border-0">
+    <img src="img/bg3.jpg" class="card-img">
+    <div class="card-img-overlay p-5">
+    <div class="row vh-100 mt-5">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6 p-5">
+            <form name="adjuster" novalidate>
+                <div class="input-group mb-3 shadow">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="addon-wrapping"><i class="fas fa-id-card"></i></span>
+                    </div>
+                    <input type="text" class="form-control" ng-model="data.userid" placeholder="Give The Adjuster A UserId" aria-label="UserId" aria-describedby="addon-wrapping" ng-required="true">
+                </div>
+                <div class="input-group mb-4 shadow">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="addon-wrapping"><i class="fas fa-user"></i></span>
+                    </div>
+                    <input type="text" class="form-control" ng-model="data.username" placeholder="Adjuster Name" aria-label="UserId" aria-describedby="addon-wrapping" ng-required="true">
+                </div>
+                <div class="input-group mb-4 shadow">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="addon-wrapping"><i class="fas fa-at"></i></span>
+                    </div>
+                    <input type="email" class="form-control" ng-model="data.email" placeholder="Adjuster Email" aria-label="Email" aria-describedby="addon-wrapping" ng-required="true">
+                </div>
+                <button type="submit" class="btn btn-outline-success btn-block" ng-click="addAdj(data)" ng-disabled="adjuster.$invalid">Add <i class="fas fa-user-plus"></i></button>
+            </form>
+        </div>
+        <div class="col-sm-3"></div>
+    </div>
+</div>
+</div>

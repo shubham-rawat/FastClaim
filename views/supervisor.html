@@ -1,0 +1,73 @@
+<div class="container-fluid">
+    <div class="row vh-100">
+        <div class="col-sm-6">
+            <div class="row mt-5">
+                <div class="col-sm-6 text-center">
+                    <a class="btn btn-lg btn-secondary" href="#!adjusterwise">View Adjusters : {{supervisorData.adjusters}}</a>
+                </div>
+                <div class="col-sm-6 border rounded">
+                        <div class="w-100 border-bottom">
+                            <span>
+                                <svg width="10" height="10">
+                                    <rect width="10" height="10" style="fill: #5EBA15" />
+                                </svg>
+                            </span>
+                            <span>Total no. Settlement Done In Positive Way</span>
+                        </div>
+                        <div class="w-100 border-bottom">
+                            <span>
+                                <svg width="10" height="10">
+                                    <rect width="10" height="10" style="fill: #E7EA65" />
+                                </svg>
+                            </span>
+                            <span>Total no. of claimants that are in dicey situation</span>
+                        </div>
+                        <div class="w-100 border-bottom">
+                            <span>
+                                <svg width="10" height="10">
+                                    <rect width="10" height="10" style="fill: #FF8C8C" />
+                                </svg>
+                            </span>
+                            <span>Total no. of claimants who rejected to accept our offer and wants to through the lawyer route</span>
+                        </div>
+                    </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-sm-4 text-center px-5">
+                    <button ng-click="getClaims(1)" class="btn btn-lg btn-block green shadow">{{supervisorData.green}}</button>
+                </div>
+                <div class="col-sm-4 text-center px-5">
+                    <button ng-click="getClaims(2)" class="btn btn-lg btn-block yellow shadow">{{supervisorData.yellow}}</button>
+                </div>
+                <div class="col-sm-4 text-center px-5">
+                    <button ng-click="getClaims(3)" class="btn btn-lg btn-block red shadow">{{supervisorData.red}}</button>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-10 border rounded text-center py-2">
+                    <table class="table table-hover">
+                        <thead class="thead-light">
+                            <tr>
+                            <th scope="col">Claim No.</th>
+                            <th scope="col">Settlement Type</th>
+                            <th scope="col">Details</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr id="claimsTable" ng-repeat="claim in claims">
+                            <td>{{claim.claim_no}}</td>
+                            <td>{{claim.type}}</td>
+                            <td>{{claim.details}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-sm-1"></div>
+            </div>
+        </div>
+        <div class="col-sm-6 border-left">
+            <hc-pie-chart title="Claims Status" data="pieData">Placeholder for pie chart</hc-pie-chart>
+        </div>
+    </div>
+</div>

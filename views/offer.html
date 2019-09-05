@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row vh-100">
+        <div class="col-sm-6 p-5 border-right">
+            <form>
+                <table class="table table-borderless">
+                    <tr>
+                        <td class="blockquote font-weight-bold">Offer Amount</td>
+                        <td><input type="text" ng-model="data.offer" class="form-control"></td>
+                    </tr>
+                    <tr>
+                        <td colspan=2 class="blockquote font-weight-bold">Details For Claimant :</td>
+                    </tr>
+                    <tr>
+                        <td colspan=2>
+                            <textarea cols="30" rows="10" ng-model="data.details" class="form-control"></textarea>
+                        </td>
+                    </tr>
+                    <tr class="mt-4">
+                        <td colspan=2 class="px-5">
+                            <button class="btn btn-info btn-block shadow" ng-click="makeOffer(data)">Submit <i class="fas fa-angle-right"></i></button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div class="col-sm-6 p-5">
+
+        </div>
+    </div>
+</div>
